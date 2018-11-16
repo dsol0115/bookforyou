@@ -55,6 +55,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/selectbtn"
         android:fontFamily="monospace"
+        android:onClick="onselectButtonClicked"
         android:text="셀렉트"
         android:textColor="#686868"
         android:textSize="18sp"
