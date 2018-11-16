@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
     public void onselectButtonClicked(View v){
         Intent intent = new Intent(getApplicationContext(), ExselectActivity.class);
         startActivity(intent);
-
     }
+
+    public void OnchallengeButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), Challenge.class);
+        startActivity(intent);
+    }
+
 }

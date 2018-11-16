@@ -76,6 +76,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/challengebtn"
         android:fontFamily="monospace"
+        android:onClick="OnchallengeButtonClicked"
         android:text="챌린지"
         android:textColor="#FFFFFF"
         android:textSize="18sp"

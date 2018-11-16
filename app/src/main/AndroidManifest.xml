@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExselectActivity"></activity>
+        <activity android:name=".ExselectActivity" />
+        <activity android:name=".Challenge"></activity>
     </application>
 
 </manifest>
