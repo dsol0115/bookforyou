@@ -13,6 +13,7 @@
         android:background="@drawable/pref_selectbtn"
         android:fontFamily="monospace"
         android:lineSpacingExtra="24sp"
+        android:onClick="onprefclicked"
         android:text="취향 셀렉"
         android:textColor="#ffffff"
         android:textSize="70sp"
