@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExselectActivity" />
-        <activity android:name=".prefselectex"></activity>
+        <activity android:name=".prefselectex" />
+        <activity android:name=".prefselect"></activity>
     </application>
 
 </manifest>
