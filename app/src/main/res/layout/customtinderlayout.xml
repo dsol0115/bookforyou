@@ -35,8 +35,7 @@
                 <ImageView
                     android:id="@+id/userIMG"
                     android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    app:srcCompat="@drawable/afteryou" />
+                    android:layout_height="450dp" />
 
                 <TextView
                     android:id="@+id/booktitletxt"
@@ -44,7 +43,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="monospace"
-                    android:text="애프터 유"
                     android:textColor="#686868"
                     android:textSize="24sp"
                     android:textStyle="bold"

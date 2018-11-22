@@ -5,7 +5,9 @@ import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -38,9 +40,15 @@ public class prefselect extends AppCompatActivity {
 
         context = prefselect.this;
 
-        parentView = (RelativeLayout) findViewById(R.id.prefselect_layout);
+        parentView = findViewById(R.id.prefselect_layout);
 
-        windowwidth = getWindowManager().getDefaultDisplay().getWidth();
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics metrics = new DisplayMetrics();
+        display.getMetrics( metrics );
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+
+        windowwidth = width;
 
         screenCenter = windowwidth / 2;
 
@@ -56,8 +64,8 @@ public class prefselect extends AppCompatActivity {
 
             final View containerView = inflate.inflate(R.layout.customtinderlayout, null);
 
-            ImageView userIMG = (ImageView) containerView.findViewById(R.id.userIMG);
-            RelativeLayout relativeLayoutContainer = (RelativeLayout) containerView.findViewById(R.id.relative_container);
+            ImageView userIMG = containerView.findViewById(R.id.userIMG);
+            RelativeLayout relativeLayoutContainer = containerView.findViewById(R.id.relative_container);
 
 
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -78,7 +86,7 @@ public class prefselect extends AppCompatActivity {
             final TextView tvLike = new TextView(context);
             tvLike.setLayoutParams(layoutTvParams);
             tvLike.setPadding(10, 10, 10, 10);
-            tvLike.setBackgroundDrawable(getResources().getDrawable(R.drawable.btnlikeback));
+            tvLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
             tvLike.setText("LIKE");
             tvLike.setGravity(Gravity.CENTER);
             tvLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
@@ -95,7 +103,7 @@ public class prefselect extends AppCompatActivity {
             final TextView tvUnLike = new TextView(context);
             tvUnLike.setLayoutParams(layoutTvParams);
             tvUnLike.setPadding(10, 10, 10, 10);
-            tvUnLike.setBackgroundDrawable(getResources().getDrawable(R.drawable.btnlikeback));
+            tvUnLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
             tvUnLike.setText("UNLIKE");
             tvUnLike.setGravity(Gravity.CENTER);
             tvUnLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
@@ -108,7 +116,7 @@ public class prefselect extends AppCompatActivity {
             relativeLayoutContainer.addView(tvUnLike);
 
 
-            TextView tvName = (TextView) containerView.findViewById(R.id.booktitletxt);
+            TextView tvName = containerView.findViewById(R.id.booktitletxt);
 
 
             tvName.setText(bookdatamodelArrayList.get(i).getName());
@@ -266,9 +274,84 @@ public class prefselect extends AppCompatActivity {
         bookdatamodelArrayList.add(model9);
 
         bookdatamodel model10 = new bookdatamodel();
-        model9.setName("그 여름 나는");
-        model9.setPhoto(R.drawable.thatsummer);
+        model10.setName("그 여름 나는");
+        model10.setPhoto(R.drawable.thatsummer);
         bookdatamodelArrayList.add(model10);
+
+        bookdatamodel model11 = new bookdatamodel();
+        model11.setName("미움받을 용기");
+        model11.setPhoto(R.drawable.courage);
+        bookdatamodelArrayList.add(model11);
+
+        bookdatamodel model12 = new bookdatamodel();
+        model12.setName("그릿");
+        model12.setPhoto(R.drawable.grit);
+        bookdatamodelArrayList.add(model12);
+
+        bookdatamodel model13 = new bookdatamodel();
+        model13.setName("마시멜로 이야기");
+        model13.setPhoto(R.drawable.marshmello);
+        bookdatamodelArrayList.add(model13);
+
+        bookdatamodel model14 = new bookdatamodel();
+        model14.setName("신경 끄기의 기술");
+        model14.setPhoto(R.drawable.technique);
+        bookdatamodelArrayList.add(model14);
+
+        bookdatamodel model15 = new bookdatamodel();
+        model15.setName("타이탄의 도구들");
+        model15.setPhoto(R.drawable.titan);
+        bookdatamodelArrayList.add(model15);
+
+        bookdatamodel model16 = new bookdatamodel();
+        model16.setName("그리고 아무도 없었다");
+        model16.setPhoto(R.drawable.agatha);
+        bookdatamodelArrayList.add(model16);
+
+        bookdatamodel model17 = new bookdatamodel();
+        model17.setName("바스커빌가의 개");
+        model17.setPhoto(R.drawable.dog);
+        bookdatamodelArrayList.add(model17);
+
+        bookdatamodel model18 = new bookdatamodel();
+        model18.setName("환상의 여인");
+        model18.setPhoto(R.drawable.lady);
+        bookdatamodelArrayList.add(model18);
+
+        bookdatamodel model19 = new bookdatamodel();
+        model19.setName("가면산장 살인사건");
+        model19.setPhoto(R.drawable.mask);
+        bookdatamodelArrayList.add(model19);
+
+        bookdatamodel model20 = new bookdatamodel();
+        model20.setName("Y의 비극");
+        model20.setPhoto(R.drawable.tragedy);
+        bookdatamodelArrayList.add(model20);
+
+        bookdatamodel model21 = new bookdatamodel();
+        model21.setName("해리포터와 마법사의 돌");
+        model21.setPhoto(R.drawable.harrypotter);
+        bookdatamodelArrayList.add(model21);
+
+        bookdatamodel model22 = new bookdatamodel();
+        model22.setName("반지의 제왕");
+        model22.setPhoto(R.drawable.lordoftherings);
+        bookdatamodelArrayList.add(model22);
+
+        bookdatamodel model23 = new bookdatamodel();
+        model23.setName("나니아 연대기: 사자, 마녀 그리고 옷장");
+        model23.setPhoto(R.drawable.narnia);
+        bookdatamodelArrayList.add(model23);
+
+        bookdatamodel model24 = new bookdatamodel();
+        model24.setName("리버보이");
+        model24.setPhoto(R.drawable.riverboy);
+        bookdatamodelArrayList.add(model24);
+
+        bookdatamodel model25 = new bookdatamodel();
+        model25.setName("트와일라잇");
+        model25.setPhoto(R.drawable.twighlight);
+        bookdatamodelArrayList.add(model25);
 
         Collections.reverse(bookdatamodelArrayList);
 

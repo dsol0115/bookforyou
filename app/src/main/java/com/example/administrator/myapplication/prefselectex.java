@@ -14,8 +14,8 @@ public class prefselectex extends AppCompatActivity {
         setContentView(R.layout.activity_prefselectex);
     }
 
-    public void onbtnclicked(View v){
-        Intent myIntent = new Intent(getApplicationContext(), prefselect.class);
-        startActivity(myIntent);
+    public void onnextbtnclicked(View v){
+        Intent myIntents = new Intent(getApplicationContext(), prefselect.class);
+        startActivity(myIntents);
     }
 }
