@@ -87,7 +87,7 @@ public class prefselect extends AppCompatActivity {
             tvLike.setLayoutParams(layoutTvParams);
             tvLike.setPadding(10, 10, 10, 10);
             tvLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
-            tvLike.setText("LIKE");
+            tvLike.setText("UNLIKE");
             tvLike.setGravity(Gravity.CENTER);
             tvLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             tvLike.setTextSize(25);
@@ -104,7 +104,7 @@ public class prefselect extends AppCompatActivity {
             tvUnLike.setLayoutParams(layoutTvParams);
             tvUnLike.setPadding(10, 10, 10, 10);
             tvUnLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
-            tvUnLike.setText("UNLIKE");
+            tvUnLike.setText("LIKE");
             tvUnLike.setGravity(Gravity.CENTER);
             tvUnLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             tvUnLike.setTextSize(25);
@@ -116,10 +116,6 @@ public class prefselect extends AppCompatActivity {
             relativeLayoutContainer.addView(tvUnLike);
 
 
-            TextView tvName = containerView.findViewById(R.id.booktitletxt);
-
-
-            tvName.setText(bookdatamodelArrayList.get(i).getName());
 
 
             relativeLayoutContainer.setOnTouchListener(new View.OnTouchListener() {
@@ -224,134 +220,62 @@ public class prefselect extends AppCompatActivity {
     private void getArrayData() {
 
         bookdatamodel model = new bookdatamodel();
-        model.setName("군주론");
-        model.setPhoto(R.drawable.principe);
+        model.setPhoto(R.drawable.afteryou);
         bookdatamodelArrayList.add(model);
 
 
         bookdatamodel model2 = new bookdatamodel();
-        model2.setName("데미안");
-        model2.setPhoto(R.drawable.damien);
+        model2.setPhoto(R.drawable.agatha);
         bookdatamodelArrayList.add(model2);
 
         bookdatamodel model3 = new bookdatamodel();
-        model3.setName("햄릿");
-        model3.setPhoto(R.drawable.hamlet);
+        model3.setPhoto(R.drawable.courage);
         bookdatamodelArrayList.add(model3);
 
 
         bookdatamodel model4 = new bookdatamodel();
-        model4.setName("오만과 편견");
-        model4.setPhoto(R.drawable.prideandprejudice);
+        model4.setPhoto(R.drawable.damien);
         bookdatamodelArrayList.add(model4);
 
 
         bookdatamodel model5 = new bookdatamodel();
-        model5.setName("주홍글씨");
-        model5.setPhoto(R.drawable.scarlettletter);
+        model5.setPhoto(R.drawable.dog);
         bookdatamodelArrayList.add(model5);
 
         bookdatamodel model6 = new bookdatamodel();
-        model6.setName("애프터 유");
-        model6.setPhoto(R.drawable.afteryou);
+        model6.setPhoto(R.drawable.grit);
         bookdatamodelArrayList.add(model6);
 
 
         bookdatamodel model7 = new bookdatamodel();
-        model7.setName("사서함 110호의 우편물");
-        model7.setPhoto(R.drawable.lettersat);
+        model7.setPhoto(R.drawable.hamlet);
         bookdatamodelArrayList.add(model7);
 
 
         bookdatamodel model8 = new bookdatamodel();
-        model8.setName("작가들의 연애편지");
-        model8.setPhoto(R.drawable.romanticletter);
+        model8.setPhoto(R.drawable.harrypotter);
         bookdatamodelArrayList.add(model8);
 
         bookdatamodel model9 = new bookdatamodel();
-        model9.setName("백의 그림자");
-        model9.setPhoto(R.drawable.shadow);
+        model9.setPhoto(R.drawable.lady);
         bookdatamodelArrayList.add(model9);
 
         bookdatamodel model10 = new bookdatamodel();
-        model10.setName("그 여름 나는");
-        model10.setPhoto(R.drawable.thatsummer);
+        model10.setPhoto(R.drawable.letterbox);
         bookdatamodelArrayList.add(model10);
 
         bookdatamodel model11 = new bookdatamodel();
-        model11.setName("미움받을 용기");
-        model11.setPhoto(R.drawable.courage);
+        model11.setPhoto(R.drawable.lordoftherings);
         bookdatamodelArrayList.add(model11);
 
         bookdatamodel model12 = new bookdatamodel();
-        model12.setName("그릿");
-        model12.setPhoto(R.drawable.grit);
+        model12.setPhoto(R.drawable.tragedy);
         bookdatamodelArrayList.add(model12);
 
         bookdatamodel model13 = new bookdatamodel();
-        model13.setName("마시멜로 이야기");
-        model13.setPhoto(R.drawable.marshmello);
+        model13.setPhoto(R.drawable.twighlight);
         bookdatamodelArrayList.add(model13);
 
-        bookdatamodel model14 = new bookdatamodel();
-        model14.setName("신경 끄기의 기술");
-        model14.setPhoto(R.drawable.technique);
-        bookdatamodelArrayList.add(model14);
-
-        bookdatamodel model15 = new bookdatamodel();
-        model15.setName("타이탄의 도구들");
-        model15.setPhoto(R.drawable.titan);
-        bookdatamodelArrayList.add(model15);
-
-        bookdatamodel model16 = new bookdatamodel();
-        model16.setName("그리고 아무도 없었다");
-        model16.setPhoto(R.drawable.agatha);
-        bookdatamodelArrayList.add(model16);
-
-        bookdatamodel model17 = new bookdatamodel();
-        model17.setName("바스커빌가의 개");
-        model17.setPhoto(R.drawable.dog);
-        bookdatamodelArrayList.add(model17);
-
-        bookdatamodel model18 = new bookdatamodel();
-        model18.setName("환상의 여인");
-        model18.setPhoto(R.drawable.lady);
-        bookdatamodelArrayList.add(model18);
-
-        bookdatamodel model19 = new bookdatamodel();
-        model19.setName("가면산장 살인사건");
-        model19.setPhoto(R.drawable.mask);
-        bookdatamodelArrayList.add(model19);
-
-        bookdatamodel model20 = new bookdatamodel();
-        model20.setName("Y의 비극");
-        model20.setPhoto(R.drawable.tragedy);
-        bookdatamodelArrayList.add(model20);
-
-        bookdatamodel model21 = new bookdatamodel();
-        model21.setName("해리포터와 마법사의 돌");
-        model21.setPhoto(R.drawable.harrypotter);
-        bookdatamodelArrayList.add(model21);
-
-        bookdatamodel model22 = new bookdatamodel();
-        model22.setName("반지의 제왕");
-        model22.setPhoto(R.drawable.lordoftherings);
-        bookdatamodelArrayList.add(model22);
-
-        bookdatamodel model23 = new bookdatamodel();
-        model23.setName("나니아 연대기: 사자, 마녀 그리고 옷장");
-        model23.setPhoto(R.drawable.narnia);
-        bookdatamodelArrayList.add(model23);
-
-        bookdatamodel model24 = new bookdatamodel();
-        model24.setName("리버보이");
-        model24.setPhoto(R.drawable.riverboy);
-        bookdatamodelArrayList.add(model24);
-
-        bookdatamodel model25 = new bookdatamodel();
-        model25.setName("트와일라잇");
-        model25.setPhoto(R.drawable.twighlight);
-        bookdatamodelArrayList.add(model25);
 
         Collections.reverse(bookdatamodelArrayList);
 

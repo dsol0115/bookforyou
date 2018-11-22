@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.658"
-        app:srcCompat="@drawable/exbook" />
+        app:srcCompat="@drawable/exbookcover" />
 
     <ImageView
         android:id="@+id/imageView"
