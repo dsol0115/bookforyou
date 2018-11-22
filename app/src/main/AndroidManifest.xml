@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExselectActivity" />
-        <activity android:name=".Challenge"></activity>
+        <activity android:name=".Challenge" />
+        <activity android:name=".info_challenge" />
+        <activity android:name=".real_C"></activity>
     </application>
 
 </manifest>
