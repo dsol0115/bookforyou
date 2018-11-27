@@ -8,33 +8,42 @@
 
     <Button
         android:id="@+id/prefbtn"
-        android:layout_width="195dp"
-        android:layout_height="590dp"
-        android:background="@drawable/pref_selectbtn"
+        android:layout_width="230dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/prefresultbtn"
         android:fontFamily="monospace"
         android:lineSpacingExtra="24sp"
         android:onClick="onprefclicked"
-        android:text="취향 셀렉"
-        android:textColor="#ffffff"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
-
-    <Button
-        android:id="@+id/mybtn"
-        android:layout_width="195dp"
-        android:layout_height="590dp"
-        android:background="@drawable/my_selectbtn"
-        android:fontFamily="monospace"
-        android:lineSpacingExtra="24sp"
-        android:onClick="myselectclicked"
-        android:text="나의 셀렉"
         android:textColor="#ffffff"
         android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintVertical_bias="0.292" />
+
+    <Button
+        android:id="@+id/mybtn"
+        android:layout_width="230dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/myresultbtn"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="24sp"
+        android:onClick="myselectclicked"
+        android:textColor="#ffffff"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
 </android.support.constraint.ConstraintLayout>
