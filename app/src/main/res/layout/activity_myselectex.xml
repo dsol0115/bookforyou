@@ -4,39 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".prefselectex">
+
+    tools:context=".myselectex">
 
     <ImageView
-        android:id="@+id/prefselectbackimg"
+        android:id="@+id/myselectbackimg"
         android:layout_width="380dp"
         android:layout_height="550dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/prefselectback" />
+        app:srcCompat="@drawable/myselectback" />
 
     <Button
-        android:id="@+id/prefselectbtn"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
+        android:id="@+id/startbutton"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="onnextbtnclicked"
+        android:onClick="myselectstart"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myselectbackimg"
         app:layout_constraintVertical_bias="0.98" />
 </android.support.constraint.ConstraintLayout>
