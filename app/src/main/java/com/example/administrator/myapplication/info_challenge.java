@@ -18,7 +18,7 @@ public class info_challenge extends AppCompatActivity {
                 new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), real_C.class);
+                        Intent intent = new Intent(getApplicationContext(), bookcover.class);
                         startActivity(intent);
                     }
                 }
