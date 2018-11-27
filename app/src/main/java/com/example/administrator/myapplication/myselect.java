@@ -85,7 +85,7 @@ public class myselect extends AppCompatActivity {
             tvLike.setLayoutParams(layoutTvParams);
             tvLike.setPadding(10, 10, 10, 10);
             tvLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
-            tvLike.setText("UNLIKE");
+            tvLike.setText("UNREAD");
             tvLike.setGravity(Gravity.CENTER);
             tvLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             tvLike.setTextSize(25);
@@ -101,7 +101,7 @@ public class myselect extends AppCompatActivity {
             tvUnLike.setLayoutParams(layoutTvParams);
             tvUnLike.setPadding(10, 10, 10, 10);
             tvUnLike.setBackground(getResources().getDrawable(R.drawable.btnlikeback));
-            tvUnLike.setText("LIKE");
+            tvUnLike.setText("READ");
             tvUnLike.setGravity(Gravity.CENTER);
             tvUnLike.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             tvUnLike.setTextSize(25);
@@ -190,12 +190,12 @@ public class myselect extends AppCompatActivity {
                                 containerView.setY(0);
                                 containerView.setRotation(0);
                             } else if (Likes == 1) {
-                                Toast.makeText(context, "관심없음", Toast.LENGTH_SHORT).show();
-                                Log.e("Event_Status :-> ", "관심없음");
+                                Toast.makeText(context, "읽지않음", Toast.LENGTH_SHORT).show();
+                                Log.e("Event_Status :-> ", "읽지않음");
                                 parentView.removeView(containerView);
                             } else if (Likes == 2) {
-                                Toast.makeText(context, "관심있음", Toast.LENGTH_SHORT).show();
-                                Log.e("Event_Status :-> ", "관심있음");
+                                Toast.makeText(context, "읽었음", Toast.LENGTH_SHORT).show();
+                                Log.e("Event_Status :-> ", "읽었음");
                                 parentView.removeView(containerView);
                             }
                             break;

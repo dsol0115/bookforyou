@@ -29,6 +29,7 @@
         android:background="@drawable/my_selectbtn"
         android:fontFamily="monospace"
         android:lineSpacingExtra="24sp"
+        android:onClick="myselectclicked"
         android:text="나의 셀렉"
         android:textColor="#ffffff"
         android:textSize="70sp"

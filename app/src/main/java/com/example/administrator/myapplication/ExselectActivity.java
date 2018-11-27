@@ -17,4 +17,9 @@ public class ExselectActivity extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), prefselectex.class);
         startActivity(myIntent);
     }
+
+    public void myselectclicked(View v){
+        Intent myIntent = new Intent(getApplicationContext(), myselectex.class);
+        startActivity(myIntent);
+    }
 }
