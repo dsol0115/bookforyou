@@ -36,4 +36,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void userpageclicked(View v){
+        Intent intent = new Intent(getApplicationContext(), userpage.class);
+        startActivity(intent);
+    }
+
 }
