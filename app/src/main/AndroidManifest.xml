@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.myapplication">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,13 +32,11 @@
         <activity android:name=".myselectex" />
         <activity android:name=".myselect" />
         <activity android:name=".userpage" />
-        <activity android:name=".resultprefselect"></activity>
+        <activity android:name=".resultprefselect" />
         <activity android:name=".bookcover" />
         <activity android:name=".pan_c" />
-        <activity android:name=".pan_c_result"></activity>
+        <activity android:name=".pan_c_result" />
+        <activity android:name=".prefresultdetail"></activity>
     </application>
-
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
 
 </manifest>
