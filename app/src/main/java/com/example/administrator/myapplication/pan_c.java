@@ -19,7 +19,7 @@ public class pan_c extends AppCompatActivity {
                 new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), pan_c.class);
+                        Intent intent = new Intent(getApplicationContext(), pan_c_result.class);
                         startActivity(intent);
                     }
                 }
