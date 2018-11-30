@@ -25,7 +25,9 @@
         <activity android:name=".real_C" />
         <activity android:name=".prefselectex" />
         <activity android:name=".prefselect" />
-        <activity android:name=".bookcover"></activity>
+        <activity android:name=".bookcover" />
+        <activity android:name=".pan_c" />
+        <activity android:name=".pan_c_result"></activity>
     </application>
 
 </manifest>
