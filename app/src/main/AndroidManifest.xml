@@ -27,7 +27,8 @@
         <activity android:name=".prefselect" />
         <activity android:name=".myselectex" />
         <activity android:name=".myselect" />
-        <activity android:name=".userpage"></activity>
+        <activity android:name=".userpage" />
+        <activity android:name=".resultprefselect"></activity>
     </application>
 
 </manifest>
