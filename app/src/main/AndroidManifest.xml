@@ -33,4 +33,7 @@
         <activity android:name=".pan_c_result"></activity>
     </application>
 
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
 </manifest>
