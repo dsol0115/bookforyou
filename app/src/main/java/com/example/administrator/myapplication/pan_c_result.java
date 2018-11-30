@@ -13,6 +13,7 @@ public class pan_c_result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pan_c_result);
 
+
         Button btn_go = (Button) findViewById(R.id.button12);
         btn_go.setOnClickListener(
                 new Button.OnClickListener(){
@@ -24,5 +25,9 @@ public class pan_c_result extends AppCompatActivity {
                 }
         );
 
+
+
     }
+
+
 }
