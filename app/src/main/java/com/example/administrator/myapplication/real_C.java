@@ -1,59 +1,78 @@
 package com.example.administrator.myapplication;
 
+
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.PopupMenu;
-import android.widget.TextView;
+import android.widget.ImageView;
+
+import java.util.List;
 
 public class real_C extends AppCompatActivity {
-    Button buttont3;
-    TextView tv;
-    PopupMenu pm;
+
+    Button btnCmera;
+    ImageView img;
+
+    Button Button_Camera;
+    ImageView imageView;
+
+    final int CAMERA_REQUEST_CODE = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_real__c);
-        buttont3 = (Button)findViewById(R.id.button3);
-        tv= (TextView)findViewById(R.id.textView);
 
-        pm = new PopupMenu(this, buttont3);
-        pm.setOnMenuItemClickListener(
-                new PopupMenu.OnMenuItemClickListener() {
+        btnCmera = (Button) findViewById(R.id.button2);
+        img = (ImageView) findViewById(R.id.imageView6);
+
+        btnCmera.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(IsCameraAvailable()){
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent, CAMERA_REQUEST_CODE);
+                }
+            }
+        });
+
+
+
+        Button btn_go = (Button) findViewById(R.id.button4);
+        btn_go.setOnClickListener(
+                new Button.OnClickListener(){
                     @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()){
-                            case 10:
-                                tv.setText("15");
-                                break;
-
-                            case 20:
-                                tv.setText("30");
-                                break;
-
-                            case 30:
-                                tv.setText("40");
-                                break;
-                        }
-                        return false;
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), pan_c.class);
+                        startActivity(intent);
                     }
                 }
         );
 
-        Menu menu = pm.getMenu();
-        menu.add(0,10,0, "15");
-        menu.add(0,20,0, "30");
-        menu.add(0,30,0, "40");
+
     }
 
-    public void mOnClick(View v) {
-        Log.v("출력", "팝업");
-        pm.show();
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==CAMERA_REQUEST_CODE){
+            Bundle bundle = data.getExtras();
+            Bitmap bitmap = (Bitmap)bundle.get("data");
+            img.setImageBitmap(bitmap);
+        }
+    }
 
+    private boolean IsCameraAvailable() {
+
+        PackageManager packageManager = getPackageManager();
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        return list.size() > 0;
     }
 }
