@@ -37,7 +37,9 @@
         <activity android:name=".pan_c" />
         <activity android:name=".pan_c_result" />
         <activity android:name=".my_s_read" />
-        <activity android:name=".my_s_unread"></activity>
+        <activity android:name=".my_s_unread"/>
+        <activity android:name=".prefresultdetail">
+        </activity>
     </application>
 
 </manifest>
